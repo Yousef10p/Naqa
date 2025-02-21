@@ -1,0 +1,237 @@
+html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.loading {
+    position: fixed; /* Use fixed to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Fully visible by default */
+    visibility: visible; /* Visible by default */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition */
+    z-index: 1000; 
+  }
+  
+  .hidden {
+    opacity: 0; /* Fully transparent */
+    visibility: hidden; /* Hidden after fading out */
+  }
+.spinner-border{
+    scale: 2;
+}
+
+.TemporEvents{
+    
+    height: 6rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.TemporEventsExist{
+    border-bottom: solid 4px grey;
+}
+
+.App{
+    display: block;
+    height: 100vh;
+}
+
+.Nav{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.Nav p{
+    /* font-family: dock11; */
+    font-size: 3rem;
+    letter-spacing: .4rem;
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin: auto;
+    background-image: url("img.jpeg");
+    background-size: 120%;
+    animation: bg-animation 10s cubic-bezier(1, 1, 1, 1) infinite; /* Added infinite loop */
+}
+
+@keyframes bg-animation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+.bx{
+    scale: 2;
+    margin-right: auto;
+    margin-left: 1rem;
+}
+.bx-inner{
+    scale: 2;
+    margin-left: 5%;
+}
+
+.offcanvas-header3{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.TemporEvents p{
+    font-size: 1.5rem;
+    opacity: .8;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.Date{
+    /* margin-top: 5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 25px;
+}
+
+.Date-2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.Date-CurrentDate{
+    padding: 15px 15px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.time{
+    font-size: larger;
+}
+
+.day{
+    text-align: center;
+    opacity: 0.8;
+}
+
+.higri{
+    text-align: center;
+    direction: rtl;
+    opacity: 0.8;
+}
+
+
+
+.box{
+    
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    width: 23rem;
+    margin: auto;
+    color: whitesmoke;
+    border-radius: 12px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 
+                0 0 20px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;                
+}
+
+.box-upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    font-size: 23px;
+    text-align: center;
+}
+
+.box-lower{
+    height: 40%;
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: solid 0.005rem gray;
+}
+
+.box-lower-rhs{
+    width: 5%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: red;
+}
+
+.box-lower-lhs{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.before{
+    color: red;
+}
+
+
+
+/* card */
+
+.time-card-div{
+    display: flex;
+    gap: 1rem;
+    /* align-items:; */
+    justify-content: start;
+    /* border: solid 4px red; */
+    
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.time-card-inner-div-lhs-rhs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 4px red; */
+    
+    width: 50%;
+    
+}
+
+.card{
+    width: 8rem;
+    height: 4rem;
+    border: solid 4px grey;
+    border-radius: 2rem;
+    background-color: inherit;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card p{
+    margin: 0;
+}
