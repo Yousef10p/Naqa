@@ -1,6 +1,6 @@
 html{
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .loading {
@@ -46,7 +46,7 @@ html{
 
 .Nav{
     display: flex;
-    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
     height: 5rem;
     border-radius: 1rem;
@@ -60,7 +60,6 @@ html{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    margin: auto;
     background-image: url("img.jpeg");
     background-size: 120%;
     animation: bg-animation 10s cubic-bezier(1, 1, 1, 1) infinite; /* Added infinite loop */
@@ -73,7 +72,6 @@ html{
 }
 .bx{
     scale: 2;
-    margin-right: auto;
     margin-left: 1rem;
 }
 .bx-inner{
@@ -198,13 +196,14 @@ html{
 
 .time-card-div{
     display: flex;
-    gap: 1rem;
+    gap: .8rem;
     /* align-items:; */
     justify-content: start;
     /* border: solid 4px red; */
     
-    width: 90%;
-    margin: 3rem auto;
+    width: 100%;
+    margin: .6rem auto;
+    background-color: inherit;
 }
 
 .time-card-inner-div-lhs-rhs{
@@ -214,9 +213,7 @@ html{
     align-items: center;
     justify-content: center;
     /* border: solid 4px red; */
-    
-    width: 50%;
-    
+    width: 50%;  
 }
 
 .card{

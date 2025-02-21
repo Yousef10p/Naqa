@@ -12,28 +12,26 @@ export default function Nav(){
             <div class="offcanvas offcanvas-bottom bg-dark text-light " tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
                 <div class="offcanvas-header3">
                 <i 
-  onClick={() => window.open("https://www.linkedin.com/in/yousef-alogiely-29389b283/", "_blank")}  
-  className="bi bi-linkedin bx-inner" 
-  style={{ cursor: "pointer" }}
-></i>
+                    onClick={() => window.open("https://www.linkedin.com/in/yousef-alogiely-29389b283/", "_blank")}  
+                    className="bi bi-linkedin bx-inner" 
+                    style={{ cursor: "pointer" }}
+                  ></i>
 
-<i 
-  onClick={() => window.open("https://github.com/Yousef10p", "_blank")}  
-  className="bi bi-github bx-inner" 
-  style={{ cursor: "pointer" }}
-></i>
+                  <i 
+                    onClick={() => window.open("https://github.com/Yousef10p", "_blank")}  
+                    className="bi bi-github bx-inner" 
+                    style={{ cursor: "pointer" }}
+                  ></i>
 
-<i 
-  onClick={() => window.open("https://github.com/Yousef10p", "_blank")}  
-  className="bi bi-twitter-x bx-inner" 
-  style={{ cursor: "pointer" }}
-></i>
+                  <i 
+                    onClick={() => window.open("https://github.com/Yousef10p", "_blank")}  
+                    className="bi bi-twitter-x bx-inner" 
+                    style={{ cursor: "pointer" }}
+                  ></i>
 
 
                 </div>
-                {/* <div class="offcanvas-body small">
                 
-                </div> */}
             </div>
                 <p>Naqa نقاء</p>
         </div>
