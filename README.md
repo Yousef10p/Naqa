@@ -18,7 +18,8 @@
 git clone https://github.com/Yousef10p/Naqa.git
 cd Naqa
 npm install
-npm start```
+npm start
+```
 
 ## مصادر البيانات
 https://aladhan.com/prayer-times-api – لجلب أوقات الصلاة.
