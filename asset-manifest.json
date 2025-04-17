@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Naqa/static/css/main.3394b748.css",
-    "main.js": "/Naqa/static/js/main.9261844b.js",
-    "static/js/156.f0857f19.chunk.js": "/Naqa/static/js/156.f0857f19.chunk.js",
+    "main.js": "/Naqa/static/js/main.3acc260e.js",
+    "static/js/488.460f7dd6.chunk.js": "/Naqa/static/js/488.460f7dd6.chunk.js",
     "static/media/img.jpeg": "/Naqa/static/media/img.5d83ebdc59c9f750033c.jpeg",
     "index.html": "/Naqa/index.html",
     "main.3394b748.css.map": "/Naqa/static/css/main.3394b748.css.map",
-    "main.9261844b.js.map": "/Naqa/static/js/main.9261844b.js.map",
-    "156.f0857f19.chunk.js.map": "/Naqa/static/js/156.f0857f19.chunk.js.map"
+    "main.3acc260e.js.map": "/Naqa/static/js/main.3acc260e.js.map",
+    "488.460f7dd6.chunk.js.map": "/Naqa/static/js/488.460f7dd6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3394b748.css",
-    "static/js/main.9261844b.js"
+    "static/js/main.3acc260e.js"
   ]
 }
