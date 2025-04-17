@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Nav from './Nav';
-import DateBar from './DateBar';
-import Box from './Box';
-import Cards from './Cards';
-import TemporEvents from './TemporEvents';
+import Nav from './component/Nav';
+import DateBar from './component/DateBar';
+import Box from './component/Box';
+import Cards from './component/Cards';
+import TemporEvents from './component/TemporEvents';
 
 function App() {
   const [address, setAddress] = useState([]);
   const [data, setData] = useState()
   const [boxData, setBoxData] = useState();
+  
+  //get langtitude and lontitude add them to address array 0=lan, 1=lon
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -29,7 +31,8 @@ function App() {
     
   }, []);  
   
-  
+  //on address setup from previous useEffect then we fetch data from API
+  // data is set onn data state
   useEffect(()=>{
     if(address.length > 0){
       //api https://api.aladhan.com/v1/timings?latitude=25&longitude=44&method=4
@@ -45,7 +48,17 @@ function App() {
 
 
 
-
+  /*
+  on data change clean data and resolve desired data for the app
+  add the desired data on boxData state
+  first checks 
+  if data is already there then
+   let data in variable z (not state) and call cleanTiming(z) this add arabic names and id
+  and more suitable data
+  and after 500 milisecond we remove the spinnner of loading data becuase everything now is setup and we can lunch
+  else
+    return
+  */
   useEffect(()=>{
     const timeIn12System = (z) => {
       let x = String(z).split(":");
@@ -96,7 +109,9 @@ function App() {
     delete z['Sunset'];
     setBoxData(z);
   }
-    if(data){
+    
+  
+      if(data){
       let z = {...data['data']['timings']}
       cleanTiming(z)
       let spinner = document.querySelector('.loading');

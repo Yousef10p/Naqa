@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import '../App.css';
 
 export default function Message() {
     const [index, setIndex] = useState(null);

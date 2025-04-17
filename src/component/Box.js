@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import '../App.css';
 import Message from './Message';
 export default function Box({ timings }) {
    const [next_PrevousEvent, setNext_PrevousEvent] = useState(false)
    const [before, setBefore] = useState(false)
 
    useEffect(()=>{
+
+        // الدالتين التاليتين لايجاد الحدث الاقرب التالي والماضي من الوقت الحالي
         function setNextEventDiff(now, events){
             
             
@@ -67,11 +69,21 @@ export default function Box({ timings }) {
                 let date = new Date()
                 let realNow = ((date.getHours()*3600) + (date.getMinutes()*60) + date.getSeconds());
                 let now = (86400) - realNow;
-                let x = setNextEventDiff(now,timingsSet);
+                /* 
+               معنا الوقت من الساعة 12 الى اللحظة هذي بالثواني ومسجلة في المتغير السابق
+               راح نكلم دالتين لاعطاءنا الفرق بين وقت الحدث القادم والسابق ويكونون مسجلين بالثواني زي ما ان هذا الوقت مسجل بالثواني
+               وبناء على الاقل نسجله
+               وان كان الحدث الماضي قبل اقل من 20 دقيقة فاهو راح ياخذ زمام الامور
+               اذا اكثر من 20 دقيقة فا الحدث التالي ياخذ زمام الامور
+               
+               
+               
+                */
+                let x = setNextEventDiff(now,timingsSet); // 
                 let y = setPrevEventDiff(now,realNow,timingsSet);
                 // console.log(`from now ${now} to ${x[0]['ar']} = ${x[1]}`);
                 // console.log(`from ${y[0]['ar']} to ${realNow} = ${y[1]}`);
-                if(y[1] < 1200){
+                if(y[1] < 1200){// 1200 = 60*20 which is 20 minute
                     setNext_PrevousEvent(y)
                     setBefore(true)    
                 }

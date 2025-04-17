@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import '../App.css';
 
 
 export default function Nav(){
@@ -22,13 +22,6 @@ export default function Nav(){
                     className="bi bi-github bx-inner" 
                     style={{ cursor: "pointer" }}
                   ></i>
-
-                  <i 
-                    onClick={() => window.open("https://github.com/Yousef10p", "_blank")}  
-                    className="bi bi-twitter-x bx-inner" 
-                    style={{ cursor: "pointer" }}
-                  ></i>
-
 
                 </div>
                 

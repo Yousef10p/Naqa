@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import '../App.css';
 
 
 export default function DateBar({date}){
     const [time, setTime] = useState();
 
     useEffect(()=>{
+        // the followign are doing normal clock simply by editing the state [time, setTime]
         const updateClock = () => {
             let x = new Date();
             let h = x.getHours();
@@ -18,16 +19,13 @@ export default function DateBar({date}){
             let y = `${ampm} ${h}:${m}:${s} `;
             setTime(y);
         };
-
-        
-
         const interval = setInterval(updateClock, 1000); 
 
         return () => clearInterval(interval); 
     },[])
-    let day = date ? date['hijri']['weekday']['ar']: '-';
-    let year = date ? date['readable']: '-';
-    let higri = date ?  `${date['hijri']['day']} ${date['hijri']['month']['ar']} `: '-'
+    let day = date ? date['hijri']['weekday']['ar']: '-'; // get day in arabic such الاحد الخميس وهكذا
+    let year = date ? date['readable']: '-'; // get the year in readable format such ---> "17 Apr 2025"
+    let higri = date ?  `${date['hijri']['day']} ${date['hijri']['month']['ar']} `: '-' // concatenate hijri day such --> 19 and hijri-month-arabic such --> شوال resulting --> "19 شوال"
     return(
         
         <div className="Date">
